@@ -16,7 +16,7 @@ before_install:
   - luarocks install busted
 
 install:
-  - luarocks make # Install the rock, assuming there is a rockspec
+#  - luarocks make # Install the rock, assuming there is a rockspec
                   # in the root of the repository.
 
 script:
