@@ -1,0 +1,13 @@
+{
+	"main": [ "simple_test" ],
+	"generators":
+	{
+		"simple_test":
+		{
+			"contents":
+			[
+				"generated text"
+			]
+		}
+	}
+}

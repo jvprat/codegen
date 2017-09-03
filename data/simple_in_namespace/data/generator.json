@@ -1,0 +1,19 @@
+{
+	"main": [ "tests", "simple_test" ],
+	"namespaces":
+	{
+		"tests":
+		{
+			"generators":
+			{
+				"simple_test":
+				{
+					"contents":
+					[
+						"generated text"
+					]
+				}
+			}
+		}
+	}
+}
