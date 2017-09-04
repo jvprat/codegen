@@ -1,6 +1,6 @@
 local dir  = require("pl.dir")
 local file = require("pl.file")
-local json = require("json")
+local json = require("dkjson")
 local path = require("pl.path")
 
 --[[
@@ -46,7 +46,7 @@ local function load_json_file(p)
 	assert(path.isfile(p), p .. " isn't a file")
 
 	local file_contents = file.read(p)
-	local decoded_json = json.decode(file_contents, true)
+	local decoded_json = json.decode(file_contents)
 	return assert(decoded_json, "Couldn't parse the JSON file")
 end
 
@@ -62,7 +62,7 @@ local function build_generator(generator_data_path)
 end
 
 local function test_generator(generator_data_path)
-	local generator_data_config_path = path.join(generator_data_path, "generator.json")
+	local generator_data_config_path = path.join(generator_data_path, "test.json")
 	local generator_data_config = load_json_file(generator_data_config_path)
 
 	describe(generator_data_config.name .. ":", function()
